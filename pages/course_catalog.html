@@ -1,0 +1,790 @@
+[⚠️ Suspicious Content] <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Course Catalog - InvestWise Academy</title>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Finvestwise3723back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background min-h-screen">
+    <!-- Navigation Header -->
+    <nav class="bg-white shadow-sm border-b border-gray-200 sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <svg class="h-8 w-8 text-primary" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L20 10H28L22 16L24 26L16 22L8 26L10 16L4 10H12L16 2Z"/>
+                            <circle cx="16" cy="16" r="3" fill="white"/>
+                        </svg>
+                    </div>
+                    <div class="ml-3">
+                        <h1 class="text-xl font-bold text-primary">InvestWise Academy</h1>
+                    </div>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-4">
+                        <a href="learning_dashboard_homepage.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Dashboard</a>
+                        <a href="course_catalog.html" class="bg-primary-50 text-primary px-3 py-2 rounded-md text-sm font-medium">Academy</a>
+                        <a href="javascript:void(0)" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors relative">
+                            Simulator
+                            <span class="absolute -top-1 -right-1 bg-accent text-white text-xs rounded-full h-5 w-5 flex items-center justify-center">3</span>
+                        </a>
+                        <a href="market_analysis_hub.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Market Hub</a>
+                        <a href="javascript:void(0)" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Community</a>
+                        <a href="progress_portfolio.html" class="text-gray-600 hover:text-primary px-3 py-2 rounded-md text-sm font-medium transition-colors">Progress</a>
+                    </div>
+                </div>
+
+                <!-- Profile & Notifications -->
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-600 hover:text-primary relative">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-5 5-5-5h5V3h0z"/>
+                        </svg>
+                        <span class="absolute -top-1 -right-1 bg-secondary text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">2</span>
+                    </button>
+                    <div class="flex items-center space-x-2">
+                        <img class="h-8 w-8 rounded-full object-cover" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Profile" onerror="this.src='https://images.unsplash.com/photo-1584824486509-112e4181ff6b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'; this.onerror=null;" />
+                        <span class="text-sm font-medium text-gray-700 hidden sm:block">Alex Chen</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <!-- Hero Section with Search -->
+        <section class="mb-8">
+            <div class="text-center mb-8">
+                <h1 class="text-4xl font-bold text-gray-900 mb-4">Discover Your Learning Path</h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Explore our comprehensive investment courses designed to take you from beginner to expert investor</p>
+            </div>
+            
+            <!-- Search and Filter Bar -->
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-6 mb-8">
+                <div class="flex flex-col md:flex-row gap-4">
+                    <div class="flex-1 relative">
+                        <input type="text" id="searchInput" placeholder="Search courses, topics, or instructors..." class="w-full pl-12 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent" />
+                        <svg class="absolute left-4 top-1/2 transform -translate-y-1/2 h-5 w-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                        </svg>
+                    </div>
+                    <div class="flex gap-2">
+                        <select id="difficultyFilter" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                            <option value>All Levels</option>
+                            <option value="beginner">Beginner</option>
+                            <option value="intermediate">Intermediate</option>
+                            <option value="advanced">Advanced</option>
+                        </select>
+                        <select id="durationFilter" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                            <option value>Duration</option>
+                            <option value="short">< 5 hours</option>
+                            <option value="medium">5-15 hours</option>
+                            <option value="long">> 15 hours</option>
+                        </select>
+                        <select id="topicFilter" class="px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent">
+                            <option value>All Topics</option>
+                            <option value="stocks">Stocks</option>
+                            <option value="bonds">Bonds</option>
+                            <option value="crypto">Cryptocurrency</option>
+                            <option value="real-estate">Real Estate</option>
+                            <option value="options">Options</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Learning Roadmap Visualization -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6 text-center">Your Learning Journey</h2>
+            <div class="bg-white rounded-2xl shadow-sm border border-gray-200 p-8 overflow-hidden">
+                <div class="relative">
+                    <!-- Desktop Roadmap -->
+                    <div class="hidden md:block">
+                        <div class="flex items-center justify-between relative">
+                            <!-- Path line -->
+                            <div class="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-primary via-secondary to-accent transform -translate-y-1/2 z-0"></div>
+                            
+                            <!-- Roadmap Steps -->
+                            <div class="flex justify-between w-full relative z-10">
+                                <div class="roadmap-step completed" data-step="1">
+                                    <div class="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mb-4 mx-auto shadow-lg">
+                                        <svg class="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-900 mb-2 text-center">Investment Foundations</h3>
+                                    <p class="text-sm text-gray-600 text-center max-w-40">Master the basics of investing and financial markets</p>
+                                </div>
+                                
+                                <div class="roadmap-step current" data-step="2">
+                                    <div class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mb-4 mx-auto shadow-lg animate-pulse">
+                                        <svg class="h-8 w-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                        </svg>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-900 mb-2 text-center">Portfolio Management</h3>
+                                    <p class="text-sm text-gray-600 text-center max-w-40">Build and optimize your investment portfolio</p>
+                                </div>
+                                
+                                <div class="roadmap-step locked" data-step="3">
+                                    <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                        <svg class="h-8 w-8 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"/>
+                                        </svg>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-500 mb-2 text-center">Advanced Strategies</h3>
+                                    <p class="text-sm text-gray-400 text-center max-w-40">Options, derivatives, and professional techniques</p>
+                                </div>
+                                
+                                <div class="roadmap-step locked" data-step="4">
+                                    <div class="w-16 h-16 bg-gray-300 rounded-full flex items-center justify-center mb-4 mx-auto">
+                                        <svg class="h-8 w-8 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"/>
+                                        </svg>
+                                    </div>
+                                    <h3 class="font-semibold text-gray-500 mb-2 text-center">Specialized Tracks</h3>
+                                    <p class="text-sm text-gray-400 text-center max-w-40">Real estate, crypto, and niche markets</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Mobile Roadmap -->
+                    <div class="md:hidden">
+                        <div class="space-y-6">
+                            <div class="roadmap-step-mobile completed">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center flex-shrink-0">
+                                        <svg class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold text-gray-900">Investment Foundations</h3>
+                                        <p class="text-sm text-gray-600">Master the basics of investing and financial markets</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-step-mobile current">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-primary rounded-full flex items-center justify-center flex-shrink-0 animate-pulse">
+                                        <svg class="h-6 w-6 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                            <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold text-gray-900">Portfolio Management</h3>
+                                        <p class="text-sm text-gray-600">Build and optimize your investment portfolio</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="roadmap-step-mobile locked">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center flex-shrink-0">
+                                        <svg class="h-6 w-6 text-gray-500" fill="currentColor" viewBox="0 0 20 20">
+                                            <path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex-1">
+                                        <h3 class="font-semibold text-gray-500">Advanced Strategies</h3>
+                                        <p class="text-sm text-gray-400">Options, derivatives, and professional techniques</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Popular This Week -->
+        <section class="mb-12">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold text-gray-900">Popular This Week 🔥</h2>
+                <span class="text-sm text-gray-500">Based on market events</span>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="course-card bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=2940&auto=format&fit=crop" alt="Tech Stock Analysis" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">HOT</div>
+                        <div class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">4.9 ★</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-secondary-100 text-secondary-800 px-2 py-1 rounded-full text-xs font-medium">Intermediate</span>
+                            <span class="text-sm text-gray-500">8 hours</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Tech Stock Analysis Mastery</h3>
+                        <p class="text-gray-600 text-sm mb-4">Learn to evaluate technology companies and understand their growth potential in today's market.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop" alt="Sarah Kim" class="w-8 h-8 rounded-full object-cover" />
+                                <span class="text-sm text-gray-700">Sarah Kim</span>
+                            </div>
+                            <span class="text-sm text-gray-500">1,247 students</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-gray-600">
+                                <span>Prerequisites: Basic Investing</span>
+                            </div>
+                            <button class="btn-primary text-sm px-4 py-2">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1559526324-4b87b5e36e44?q=80&w=2940&auto=format&fit=crop" alt="Crypto Fundamentals" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 bg-accent text-white px-3 py-1 rounded-full text-sm font-medium">NEW</div>
+                        <div class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">4.7 ★</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-primary-100 text-primary-800 px-2 py-1 rounded-full text-xs font-medium">Beginner</span>
+                            <span class="text-sm text-gray-500">6 hours</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Cryptocurrency Fundamentals</h3>
+                        <p class="text-gray-600 text-sm mb-4">Understand blockchain technology and learn to navigate the cryptocurrency market safely.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop" alt="Alex Chen" class="w-8 h-8 rounded-full object-cover" />
+                                <span class="text-sm text-gray-700">Alex Chen</span>
+                            </div>
+                            <span class="text-sm text-gray-500">892 students</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-gray-600">
+                                <span>Prerequisites: None</span>
+                            </div>
+                            <button class="btn-primary text-sm px-4 py-2">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="course-card bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-300">
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?q=80&w=2826&auto=format&fit=crop" alt="Risk Management" class="w-full h-48 object-cover" />
+                        <div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-medium">TRENDING</div>
+                        <div class="absolute bottom-4 left-4 bg-black bg-opacity-50 text-white px-3 py-1 rounded-full text-sm">4.8 ★</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-between mb-2">
+                            <span class="bg-secondary-100 text-secondary-800 px-2 py-1 rounded-full text-xs font-medium">Intermediate</span>
+                            <span class="text-sm text-gray-500">12 hours</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Risk Management Strategies</h3>
+                        <p class="text-gray-600 text-sm mb-4">Master portfolio protection techniques and learn to minimize losses while maximizing gains.</p>
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-2">
+                                <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=2787&auto=format&fit=crop" alt="Emma Rodriguez" class="w-8 h-8 rounded-full object-cover" />
+                                <span class="text-sm text-gray-700">Emma Rodriguez</span>
+                            </div>
+                            <span class="text-sm text-gray-500">1,534 students</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <div class="text-sm text-gray-600">
+                                <span>Prerequisites: Portfolio Basics</span>
+                            </div>
+                            <button class="btn-primary text-sm px-4 py-2">Enroll Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommended for You -->
+        <section class="mb-12">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold text-gray-900">Recommended for You 🎯</h2>
+                <span class="text-sm text-gray-500">AI-curated based on your progress</span>
+            </div>
+            <div class="bg-primary-50 rounded-2xl p-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <div class="course-card bg-white rounded-xl shadow-sm border border-primary-200 overflow-hidden">
+                        <div class="flex">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop" alt="Portfolio Optimization" class="w-32 h-32 object-cover" />
+                            <div class="p-4 flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="bg-primary-100 text-primary-800 px-2 py-1 rounded-full text-xs font-medium">Next in Path</span>
+                                    <span class="text-sm text-gray-500">10 hours</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Portfolio Optimization</h3>
+                                <p class="text-gray-600 text-sm mb-3">Learn Modern Portfolio Theory and optimize your asset allocation using data-driven methods.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-gray-600">92% match</span>
+                                    <button class="text-primary font-medium text-sm hover:text-primary-700">Continue Path →</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="course-card bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
+                        <div class="flex">
+                            <img src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?q=80&w=2940&auto=format&fit=crop" alt="Options Trading" class="w-32 h-32 object-cover" />
+                            <div class="p-4 flex-1">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="bg-accent-100 text-accent-800 px-2 py-1 rounded-full text-xs font-medium">Similar Students</span>
+                                    <span class="text-sm text-gray-500">15 hours</span>
+                                </div>
+                                <h3 class="text-lg font-semibold text-gray-900 mb-2">Options Trading Basics</h3>
+                                <p class="text-gray-600 text-sm mb-3">Master calls, puts, and simple options strategies to enhance your investment toolkit.</p>
+                                <div class="flex items-center justify-between">
+                                    <span class="text-sm text-gray-600">87% match</span>
+                                    <button class="text-primary font-medium text-sm hover:text-primary-700">Explore →</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- All Courses -->
+        <section class="mb-12">
+            <div class="flex items-center justify-between mb-6">
+                <h2 class="text-2xl font-bold text-gray-900">All Courses</h2>
+                <div class="flex items-center space-x-2 text-sm text-gray-500">
+                    <span id="courseCount">24</span>
+                    <span>courses available</span>
+                </div>
+            </div>
+            <div id="courseGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Investment Fundamentals -->
+                <div class="course-card" data-difficulty="beginner" data-duration="short" data-topic="stocks">
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-300">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?q=80&w=2940&auto=format&fit=crop" alt="Investment Fundamentals" class="w-full h-48 object-cover" />
+                            <div class="absolute top-4 right-4 bg-secondary text-white px-3 py-1 rounded-full text-sm font-medium">COMPLETE</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">Beginner</span>
+                                <span class="text-sm text-gray-500">4 hours</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Investment Fundamentals</h3>
+                            <p class="text-gray-600 text-sm mb-4">Master the core concepts of investing including risk, return, and basic asset classes.</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center space-x-2">
+                                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop" alt="Dr. Michael Thompson" class="w-8 h-8 rounded-full object-cover" />
+                                    <span class="text-sm text-gray-700">Dr. Michael Thompson</span>
+                                </div>
+                                <div class="flex items-center space-x-1">
+                                    <span class="text-yellow-400">★</span>
+                                    <span class="text-sm text-gray-600">4.9 (2.1k)</span>
+                                </div>
+                            </div>
+                            <div class="progress-bar mb-3">
+                                <div class="progress-fill bg-secondary" style="width: 100%"></div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <span class="text-sm text-secondary font-medium">Completed</span>
+                                <button class="text-secondary font-medium text-sm hover:text-secondary-700">Review Course</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Real Estate Investing -->
+                <div class="course-card" data-difficulty="intermediate" data-duration="medium" data-topic="real-estate">
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-300">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2938&auto=format&fit=crop" alt="Real Estate Investing" class="w-full h-48 object-cover" />
+                            <div class="absolute top-4 right-4 bg-primary text-white px-3 py-1 rounded-full text-sm font-medium">75% OFF</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-medium">Intermediate</span>
+                                <span class="text-sm text-gray-500">14 hours</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Real Estate Investment Strategies</h3>
+                            <p class="text-gray-600 text-sm mb-4">Learn rental properties, REITs, and commercial real estate investment approaches.</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center space-x-2">
+                                    <img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2787&auto=format&fit=crop" alt="Jennifer Walsh" class="w-8 h-8 rounded-full object-cover" />
+                                    <span class="text-sm text-gray-700">Jennifer Walsh</span>
+                                </div>
+                                <div class="flex items-center space-x-1">
+                                    <span class="text-yellow-400">★</span>
+                                    <span class="text-sm text-gray-600">4.7 (845)</span>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="flex items-center justify-between text-sm text-gray-600 mb-2">
+                                    <span>Completion Rate: 89%</span>
+                                    <span>Avg. Performance: +15%</span>
+                                </div>
+                                <div class="text-sm text-gray-600">
+                                    <span>Prerequisites: Investment Fundamentals</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm">
+                                    <span class="text-gray-500 line-through">$299</span>
+                                    <span class="text-primary font-bold ml-2">$75</span>
+                                </div>
+                                <button class="btn-primary text-sm px-4 py-2">Enroll Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Advanced Portfolio Management -->
+                <div class="course-card" data-difficulty="advanced" data-duration="long" data-topic="stocks">
+                    <div class="bg-white rounded-2xl shadow-sm border border-gray-200 overflow-hidden hover:shadow-md transition-all duration-300 opacity-75">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=2940&auto=format&fit=crop" alt="Advanced Portfolio Management" class="w-full h-48 object-cover" />
+                            <div class="absolute top-4 right-4 bg-gray-500 text-white px-3 py-1 rounded-full text-sm font-medium">LOCKED</div>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium">Advanced</span>
+                                <span class="text-sm text-gray-500">20 hours</span>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-500 mb-2">Advanced Portfolio Management</h3>
+                            <p class="text-gray-400 text-sm mb-4">Professional-level portfolio construction using quantitative methods and risk models.</p>
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center space-x-2">
+                                    <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?q=80&w=2940&auto=format&fit=crop" alt="Dr. Robert Chen" class="w-8 h-8 rounded-full object-cover grayscale" />
+                                    <span class="text-sm text-gray-400">Dr. Robert Chen</span>
+                                </div>
+                                <div class="flex items-center space-x-1">
+                                    <span class="text-gray-300">★</span>
+                                    <span class="text-sm text-gray-400">4.8 (312)</span>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <div class="text-sm text-gray-400">
+                                    <span>🔒 Complete Intermediate Track First</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center justify-between">
+                                <div class="text-sm text-gray-400">
+                                    <span>$399</span>
+                                </div>
+                                <button class="bg-gray-100 text-gray-400 px-4 py-2 rounded-lg text-sm cursor-not-allowed">Locked</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- More courses would continue here... -->
+            </div>
+        </section>
+
+        <!-- Certification Track -->
+        <section class="mb-12">
+            <div class="bg-gradient-trust rounded-2xl text-white p-8">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl font-bold mb-4">Professional Certification Track</h2>
+                    <p class="text-blue-100 text-lg">Earn industry-recognized credentials that employers trust</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+                    <div class="bg-white bg-opacity-20 rounded-lg p-6 text-center">
+                        <div class="w-16 h-16 bg-white bg-opacity-30 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Certified Investment Analyst</h3>
+                        <p class="text-blue-100 text-sm">Complete foundation + intermediate tracks</p>
+                    </div>
+                    
+                    <div class="bg-white bg-opacity-20 rounded-lg p-6 text-center">
+                        <div class="w-16 h-16 bg-white bg-opacity-30 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M4 4a2 2 0 00-2 2v4a2 2 0 002 2V6h10a2 2 0 00-2-2H4zm2 6a2 2 0 012-2h8a2 2 0 012 2v4a2 2 0 01-2 2H8a2 2 0 01-2-2v-4zm6 4a2 2 0 100-4 2 2 0 000 4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Portfolio Management Pro</h3>
+                        <p class="text-blue-100 text-sm">Advanced track + capstone project</p>
+                    </div>
+                    
+                    <div class="bg-white bg-opacity-20 rounded-lg p-6 text-center">
+                        <div class="w-16 h-16 bg-white bg-opacity-30 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <svg class="h-8 w-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                        </div>
+                        <h3 class="font-semibold text-lg mb-2">Master Investor</h3>
+                        <p class="text-blue-100 text-sm">All tracks + specialized expertise</p>
+                    </div>
+                </div>
+                
+                <div class="bg-white bg-opacity-20 rounded-lg p-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+                        <div>
+                            <h3 class="font-semibold text-lg mb-2">Career Impact Statistics</h3>
+                            <div class="space-y-2 text-sm text-blue-100">
+                                <div>• 94% of certified students report salary increases</div>
+                                <div>• Average 23% boost in compensation</div>
+                                <div>• Recognized by 500+ financial firms</div>
+                                <div>• Fast-track to senior analyst roles</div>
+                            </div>
+                        </div>
+                        <div class="text-center md:text-right">
+                            <button class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                                Start Certification Path
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Mobile Bottom Navigation -->
+    <nav class="md:hidden fixed bottom-0 left-0 right-0 bg-white border-t border-gray-200 px-4 py-2">
+        <div class="flex justify-around items-center">
+            <a href="learning_dashboard_homepage.html" class="flex flex-col items-center p-2 text-gray-600">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                <span class="text-xs mt-1">Dashboard</span>
+            </a>
+            <a href="course_catalog.html" class="flex flex-col items-center p-2 text-primary">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 4.804A7.968 7.968 0 005.5 4c-1.255 0-2.443.29-3.5.804v10A7.969 7.969 0 015.5 14c1.669 0 3.218.51 4.5 1.385A7.962 7.962 0 0114.5 14c1.255 0 2.443.29 3.5.804v-10A7.968 7.968 0 0014.5 4c-1.255 0-2.443.29-3.5.804V12a1 1 0 11-2 0V4.804z"/>
+                </svg>
+                <span class="text-xs mt-1">Academy</span>
+            </a>
+            <a href="javascript:void(0)" class="flex flex-col items-center p-2 text-gray-600 relative">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M6 6V5a3 3 0 013-3h2a3 3 0 013 3v1h2a2 2 0 012 2v3.57A22.952 22.952 0 0110 13a22.95 22.95 0 01-8-1.43V8a2 2 0 012-2h2zm2-1a1 1 0 011-1h2a1 1 0 011 1v1H8V5zm1 5a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1z"/>
+                </svg>
+                <span class="absolute -top-1 -right-1 bg-accent text-white text-xs rounded-full h-4 w-4 flex items-center justify-center">3</span>
+                <span class="text-xs mt-1">Simulator</span>
+            </a>
+            <a href="market_analysis_hub.html" class="flex flex-col items-center p-2 text-gray-600">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"/>
+                    <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"/>
+                </svg>
+                <span class="text-xs mt-1">Market</span>
+            </a>
+            <a href="progress_portfolio.html" class="flex flex-col items-center p-2 text-gray-600">
+                <svg class="h-5 w-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2v1a1 1 0 102 0V3a2 2 0 012 2v6a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 6V6h4v5H7z"/>
+                </svg>
+                <span class="text-xs mt-1">Progress</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Course Preview Modal -->
+    <div id="coursePreviewModal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center p-4">
+        <div class="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-white border-b border-gray-200 p-4 flex items-center justify-between">
+                <h3 class="text-xl font-bold text-gray-900">Course Preview</h3>
+                <button id="closePreviewModal" class="text-gray-500 hover:text-gray-700">
+                    <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+                    <div>
+                        <div class="aspect-video bg-gray-100 rounded-lg mb-4 flex items-center justify-center">
+                            <div class="text-center">
+                                <svg class="h-16 w-16 text-gray-400 mx-auto mb-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                    <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z"/>
+                                </svg>
+                                <p class="text-gray-500">Course Introduction Video</p>
+                                <button class="mt-2 bg-primary text-white px-4 py-2 rounded-lg text-sm">▶ Play Preview</button>
+                            </div>
+                        </div>
+                        <div class="bg-gray-50 rounded-lg p-4">
+                            <h4 class="font-semibold text-gray-900 mb-2">What You'll Learn</h4>
+                            <ul class="space-y-1 text-sm text-gray-600">
+                                <li>• Fundamental analysis techniques</li>
+                                <li>• Risk assessment methodologies</li>
+                                <li>• Portfolio construction principles</li>
+                                <li>• Market timing strategies</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-6">
+                            <h4 class="font-semibold text-gray-900 mb-3">Course Curriculum</h4>
+                            <div class="space-y-3">
+                                <div class="border border-gray-200 rounded-lg p-3">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-medium text-gray-900">Module 1: Getting Started</span>
+                                        <span class="text-sm text-gray-500">45 min</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 mt-1">Introduction to investment principles and terminology</p>
+                                </div>
+                                <div class="border border-gray-200 rounded-lg p-3">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-medium text-gray-900">Module 2: Market Analysis</span>
+                                        <span class="text-sm text-gray-500">1.5 hrs</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 mt-1">Technical and fundamental analysis methods</p>
+                                </div>
+                                <div class="border border-gray-200 rounded-lg p-3">
+                                    <div class="flex items-center justify-between">
+                                        <span class="font-medium text-gray-900">Module 3: Risk Management</span>
+                                        <span class="text-sm text-gray-500">2 hrs</span>
+                                    </div>
+                                    <p class="text-sm text-gray-600 mt-1">Portfolio diversification and risk mitigation</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg-primary-50 rounded-lg p-4 mb-6">
+                            <h4 class="font-semibold text-gray-900 mb-2">Instructor</h4>
+                            <div class="flex items-center space-x-3">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2787&auto=format&fit=crop" alt="Instructor" class="w-12 h-12 rounded-full object-cover" />
+                                <div>
+                                    <p class="font-medium text-gray-900">Dr. Michael Thompson</p>
+                                    <p class="text-sm text-gray-600">15+ years Wall Street experience</p>
+                                    <p class="text-sm text-gray-600">★ 4.9 rating • 50k+ students</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="w-full btn-primary mb-3">Enroll in Course</button>
+                        <button class="w-full bg-gray-100 text-gray-700 py-3 rounded-lg font-medium hover:bg-gray-200 transition-colors">Add to Wishlist</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Search and Filter Functionality
+        document.getElementById('searchInput').addEventListener('input', filterCourses);
+        document.getElementById('difficultyFilter').addEventListener('change', filterCourses);
+        document.getElementById('durationFilter').addEventListener('change', filterCourses);
+        document.getElementById('topicFilter').addEventListener('change', filterCourses);
+
+        function filterCourses() {
+            const searchTerm = document.getElementById('searchInput').value.toLowerCase();
+            const difficultyFilter = document.getElementById('difficultyFilter').value;
+            const durationFilter = document.getElementById('durationFilter').value;
+            const topicFilter = document.getElementById('topicFilter').value;
+
+            const courseCards = document.querySelectorAll('.course-card');
+            let visibleCount = 0;
+
+            courseCards.forEach(card => {
+                const difficulty = card.dataset.difficulty;
+                const duration = card.dataset.duration;
+                const topic = card.dataset.topic;
+                const text = card.textContent.toLowerCase();
+
+                const matchesSearch = searchTerm === '' || text.includes(searchTerm);
+                const matchesDifficulty = difficultyFilter === '' || difficulty === difficultyFilter;
+                const matchesDuration = durationFilter === '' || duration === durationFilter;
+                const matchesTopic = topicFilter === '' || topic === topicFilter;
+
+                if (matchesSearch && matchesDifficulty && matchesDuration && matchesTopic) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            document.getElementById('courseCount').textContent = visibleCount;
+        }
+
+        // Roadmap Step Interactions
+        document.querySelectorAll('.roadmap-step').forEach(step => {
+            step.addEventListener('click', () => {
+                const stepNumber = step.dataset.step;
+                if (!step.classList.contains('locked')) {
+                    showRoadmapDetails(stepNumber);
+                }
+            });
+        });
+
+        function showRoadmapDetails(stepNumber) {
+            const details = {
+                1: "Investment Foundations: Master the core concepts of investing, risk, and return.",
+                2: "Portfolio Management: Learn to build and optimize diversified portfolios.",
+                3: "Advanced Strategies: Options, derivatives, and professional techniques.",
+                4: "Specialized Tracks: Real estate, cryptocurrency, and niche markets."
+            };
+            
+            alert(details[stepNumber] || "Course details not available.");
+        }
+
+        // Course Preview Modal
+        const coursePreviewModal = document.getElementById('coursePreviewModal');
+        const closePreviewModal = document.getElementById('closePreviewModal');
+
+        document.querySelectorAll('.course-card').forEach(card => {
+            card.addEventListener('click', (e) => {
+                if (!e.target.closest('button')) {
+                    coursePreviewModal.classList.remove('hidden');
+                }
+            });
+        });
+
+        closePreviewModal.addEventListener('click', () => {
+            coursePreviewModal.classList.add('hidden');
+        });
+
+        // Close modal when clicking outside
+        coursePreviewModal.addEventListener('click', (e) => {
+            if (e.target === coursePreviewModal) {
+                coursePreviewModal.classList.add('hidden');
+            }
+        });
+
+        // Horizontal scroll for mobile course categories
+        let isScrolling = false;
+        document.addEventListener('touchstart', () => {
+            isScrolling = true;
+        });
+
+        document.addEventListener('touchend', () => {
+            setTimeout(() => {
+                isScrolling = false;
+            }, 100);
+        });
+
+        // Smooth animations on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Animate course cards on load
+        document.querySelectorAll('.course-card').forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+            card.style.transitionDelay = `${index * 0.1}s`;
+            observer.observe(card);
+        });
+
+        // Initialize filter count
+        filterCourses();
+    </script>
+</body>
+</html>
